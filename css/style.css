@@ -1,0 +1,301 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  background: url('../images/bg-intro-mobile.png'), hsl(0, 100%, 74%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1.7rem;
+}
+.container{
+  max-width: 26rem;
+  min-height: 52rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* heading and text */
+.heading-and-text{
+  color: #fff;
+  text-align: center;
+}
+.heading{
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+.text{
+  line-height: 1.6rem;
+  opacity: 0.8;
+}
+
+/* offer */
+
+.offer-and-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.offer{
+  text-decoration: none;
+  color: hsl(246, 25%, 90%);
+  background-color: hsl(248, 32%, 49%);
+  font-size: 0.95rem;
+  text-align: center;
+  border-radius: 0.6rem;
+  padding: 1.2rem 3rem;
+  margin-bottom: 1.4rem;
+  outline: none;
+  width: 100%;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, .2);
+}
+.try-it{
+  font-weight: 500;
+  color: #fff;
+}
+
+/* form */
+
+form{
+  background: #fff;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, .2);
+}
+.form-control{
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+input{
+  width: 100%;
+  padding: 1rem;
+  border: 0.01rem solid #ccc;
+  border-radius: 0.4rem;
+  color: #777;
+  font-weight: 700;
+  font-size: 0.9rem;
+  outline-color: #777;
+}
+
+::placeholder{
+  color: #777;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.error-img{
+  position: absolute;
+  top: 0.9rem;
+  right: 1rem;
+  display: none;
+}
+.error-message,
+.email-error-message{
+  color: hsl(0, 100%, 74%);
+  font-size: 0.7rem;
+  font-style: italic;
+  text-align: right;
+  font-weight: 500;
+  margin: 0.3rem;
+  display: none;
+}
+
+/* error cases general */
+
+.form-control.error .error-img{
+  display: block;
+}
+
+.form-control.error .error-message{
+  display: block;
+}
+.form-control.error input{
+  border: 0.1rem solid hsl(0, 100%, 74%);
+}
+
+
+/* error cases wrong format email */
+
+.form-control.email-error ::placeholder{
+  color: hsl(0, 100%, 74%);
+  text-transform: none;
+}
+.form-control.email-error .error-img{
+  display: block;
+}
+.form-control.email-error .error-img{
+  display: block;
+}
+.form-control.email-error .email-error-message{
+  display: block;
+}
+.form-control.email-error input{
+  border: 0.1rem solid hsl(0, 100%, 74%);
+}
+
+
+/* success messages */
+
+.form-control.success .error-img{
+  display: none;
+}
+.form-control.success .message{
+  display: none;
+}
+
+
+.claim-trial{
+  width: 100%;
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+  background-color: hsl(154, 59%, 51%);
+  font-size: 0.95rem;
+  text-align: center;
+  border-radius: 0.4rem;
+  padding: 1.2rem 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.terms-services{
+  font-size: 0.7rem;
+  text-align: center;
+  line-height: 1.2rem;
+  margin-top: 0.7rem;
+  color: hsl(246, 25%, 77%);
+  padding: 0 1rem;
+}
+.terms-services span{
+  color: hsl(0, 100%, 74%);
+  font-weight: 700;
+}
+footer{
+  width: 20rem;
+  text-align: center;
+  position: relative;
+  top:3rem;
+
+}
+.attribution {
+   font-size: 11px; text-align: center;
+}
+.attribution a {
+   color: hsl(228, 45%, 44%);
+   text-decoration: none;
+ }
+
+
+@media screen and (min-width: 800px) {
+  body{
+    background: url('../images/bg-intro-desktop.png'), hsl(0, 100%, 74%);
+    height: 100vh;
+  }
+  .container{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: auto;
+    max-width: 70rem;
+    }
+
+  /* heading and text */
+  .heading-and-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding-right: 2rem;
+    flex: 1 1 30rem;
+  }
+  .heading{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    line-height: 3.6rem;
+  }
+
+  /* offer */
+
+  .offer-and-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex:1 1 28rem;
+  }
+  .offer{
+    width: 100%;
+  }
+
+
+  /* form */
+
+  form{
+    padding: 2.5rem;
+    width: 100%;
+  }
+  .form-control{
+    position: relative;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  input{
+    padding: 1rem 1.7rem;
+  }
+  ::placeholder{
+    color: #777;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+  }
+
+  .claim-trial{
+    width: 100%;
+    text-decoration: none;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
+    background-color: hsl(154, 59%, 51%);
+    font-size: 0.95rem;
+    text-align: center;
+    border-radius: 0.4rem;
+    padding: 1.2rem 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .terms-services{
+    font-size: 0.7rem;
+    text-align: center;
+    line-height: 1.2rem;
+    margin-top: 0.7rem;
+    color: hsl(246, 25%, 77%);
+    padding: 0 1rem;
+  }
+  .terms-services span{
+    color: hsl(0, 100%, 74%);
+    font-weight: 700;
+  }
+
+  footer a{
+    text-decoration: none;
+  }
+  .error-img{
+    top: 0.9rem;
+    right: 2rem;
+  }
+}
